@@ -17,4 +17,3 @@ and want to go straight to the Week 9 lab.
 4. Clone your repository and continue with Week 9, Part 1.
 
 Locally: `python -m unittest -v`
-# is212-week6-lab
