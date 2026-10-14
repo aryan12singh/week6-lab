@@ -47,7 +47,7 @@ The package job is the only place that builds the deployable ZIP. Downstream job
 
 Use the AWS Academy Learner Lab in `us-east-1`, its existing `LabRole`, Python 3.13 and x86_64. The lab names are `quackloan-staging` and `quackloan-prod` with function URLs using auth type NONE. Set `FUNCTION_NAME` and `FUNCTION_URL` separately in the staging and production GitHub environments. Store the three temporary AWS credentials as environment secrets: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_SESSION_TOKEN`. Refresh them when a new Learner Lab session starts.
 
-The initial staging and production jobs are placeholders until Part 4 replaces them with the AWS deployment jobs. The execution record identifies which stages have actually run.
+Both deployment jobs download the same ZIP, update their Lambda function, wait for the update to finish, and smoke-test the environment URL. Each log prints the deployed CodeSha256. The execution record distinguishes configured jobs from verified cloud deployments.
 
 ## Release-gate experiments
 
