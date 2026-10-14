@@ -15,3 +15,9 @@ htmlcov/
 .vscode/
 .idea/
 .DS_Store
+
+# Release artifacts
+build/
+staged/
+*.zip
+app.log
